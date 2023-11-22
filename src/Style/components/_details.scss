@@ -1,0 +1,135 @@
+
+
+// .about__details 
+
+
+.details {
+    // padding-left: 2em;
+
+    &__version {
+        position: absolute;
+        top: .7em;
+        right: 1.7em;
+        padding: .5em .5em;
+        background: $--light;
+        border-radius: .2em;
+        color: $text-mid;
+        border: .05em solid $--borderBlue;
+        width: 4em;
+        cursor: pointer;
+        transition: background-color .5s ease-in, color .3s linear;
+
+        @media (max-width: 950px) {
+            left: 1em;
+            top: 1em
+            // display: none;
+        }
+
+        @media (max-width: 600px) {
+            left: 1em;
+            top: 3em
+            // display: none;
+        }
+
+        @media (max-width: 530px) {
+            left: .5em;
+            top: 3em
+            // display: none;
+        }
+
+        @media (max-width: 400px) {
+            left: 2em;
+        }
+
+        &:hover {
+            background-color: $-blue-sover;
+            color: $--light;
+        }
+    }
+
+    &__details {
+        margin-top: 5em;
+        margin-bottom: 1.2em;
+        padding: 1em;
+        background: $--light;
+        border-radius: .2em;
+        border: .05em solid $--borderBlue;
+        width: 97%;
+
+        @media (max-width: 950px) {
+            margin-top: 0!important;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.2em;
+            width: 70%;
+            min-height: auto;
+        }
+
+        @media (max-width: 400px) {
+            width: 85%;
+        }
+    }
+
+    &__title {
+        margin-bottom: .8em;
+        font-weight: 500;
+        color: $-blue-s;
+    }
+
+    &__content {
+        margin-bottom: 1em;
+        line-height: 140%;
+        font-size: .97em;
+    }
+
+    &__img {
+        margin-top: 1.5em;
+
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    &__sug {
+        padding: .8em;
+        background: $--light;
+        border: .05em solid $--borderBlue;
+        width: 70%;
+        min-height: auto;
+        border-radius: .3em;
+        background-color: $oranging;
+
+        @media (max-width: 950px) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        @media (max-width: 400px) {
+            width: 83%;
+        }
+
+        &-title {
+            display: block;
+            @include align;
+            margin-bottom: .3em;
+            font-size: 1em;
+            color: $-blue-s;
+        }
+
+        &-icon {
+            margin-right: .4em;
+            font-size: 1.1em;
+        }
+
+        &-content {
+            font-size: .9em;
+            line-height: 140%;
+        }
+
+        &-link {
+            @include reset;
+            color: $-blue-s;
+        }
+    }
+}

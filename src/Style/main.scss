@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Variables 
+@import './variables/varibales';
+
+body {
+    font-family: 'Inter';
+    font-size: 1vw;
+    max-width: 100%;
+    background: $--lightBlue;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 120rem;
+
+    @media (max-width: 950px) {
+        margin: 0 0;
+        font-size: calc(0vw * 0 + 2em);
+        max-width: 0;
+        max-width: 100%;
+    }
+
+    @media (max-width: 674px) {
+        font-size: calc(0vw * 0 + 2.3em);
+    }
+
+    @media (max-width: 530px) {
+        font-size: calc(0vw * 0 + 3em);
+    }
+
+    @media (max-width: 400px) {
+        font-size: calc(0vw * 0 + 4.16em);
+    }
+}
+
+::selection {
+    color: $-blue-sover;
+}
+
+// For App 
+.app__header {
+    align-items: center;
+    height: 4em;
+
+    @media (max-width: 950px) {
+        width: 100%!important;
+    }
+}
+
+.app__bar {
+    margin-top: .7em;
+    // height: 100%;
+    // border: 1px solid red;
+
+    @media (max-width: 950px) {
+        width: 100%!important;
+    }
+}
+
+//Mixins 
+@import './mixins/mixins';
+//components 
+@import './components/header';
+@import './components/cross';
+@import './components/home';
+@import './components/preview';
+@import './components/songs';
+@import './components/lyrics';
+@import './components/about';
+@import './components/details';
+@import './components/menu';

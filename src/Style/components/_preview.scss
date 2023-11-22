@@ -1,0 +1,216 @@
+
+
+
+.preview {
+    margin: 0 auto;
+    padding-top: 1.5em;
+    width: 92%;
+    // border: 1px solid red;
+
+    // @media (max-width: 950px) {
+    //     // margin: 0 0;
+    //     // width: 0;
+    //     // width: 100%;
+    // }
+
+    @media (max-width: 530px) {
+         min-height: 50em;
+        //  width: 100%;
+    }
+
+    &__image {
+        margin-bottom: 4.3em;
+        position: relative;
+        @include flex;
+        height: 14em;
+
+        &::after {
+            content:"";
+            position: absolute;
+            left: -2.8em;
+            bottom: -1em;
+            width: 6em;
+            height: 5em;
+            clip-path: circle(36.4% at 50% 0);
+            border-radius: 30em;
+            transform: skewY(30deg);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.108), rgba(0, 0, 0, 0.143))
+        }
+
+        @media (max-width: 530px) {
+            min-height: 18em;
+            margin-bottom: 2em;
+       }
+
+       @media (max-width: 400px) {
+            flex-direction: column;
+            min-height: 26em;;
+       }
+       
+       @media (max-width: 385px) {
+           margin-bottom: .8em;
+           min-height: 29em;
+       }
+    }
+
+    &__img {
+        position: relative;
+        transform: translateX(-20%);
+        object-fit: contain;
+        width: 10em;
+        height: 10em;
+    }
+
+    &__text {
+        padding-top: 1em;
+        // padding-bottom: 2em;
+    }
+
+    &__title {
+        margin-bottom: .5em;
+        font-size: 2.4em;
+        font-weight: 600;
+
+        @media (max-width: 530px) {
+            font-size: 2em;
+        }
+        @media (max-width: 385px) {
+            font-size: 1.8em;
+        }
+    }
+
+    &__content {
+        margin-bottom: .5em;
+        line-height: 140%;
+        font-size: 1em;
+        font-weight: 400;
+        color: darken($text-mid, 14);
+
+        > strong {
+            font-size: .9em;
+        }
+        em {
+            display: block;
+            font-style: italic;
+            font-size: .8em;
+            text-decoration: underline;
+            color: $-blue-sover;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__banner {
+        margin-bottom: 2em;
+        padding: .85em;
+        width: 70%;
+        min-height: 6em;
+        border: .05em solid $--borderBlue;
+        border-radius: .2em;
+
+        @media (max-width: 530px) {
+           width: 89%;
+           min-height: 8em;
+       }
+
+       @media (max-width: 385px) {
+        width: 100%;
+       }
+    }
+
+    &__announce {
+        margin-bottom: .6em;
+        padding: .6em 1em;
+        max-width: fit-content;
+        background-color: $-blue-sover;
+        color: $--light;
+        border-radius: .2em;
+    }
+
+    &__infos {
+        margin-bottom: 4.3em;
+        padding: .85em;
+        @include flex;
+        border-radius: .2em;
+        min-height: 6em;
+        background: $oranging;
+
+        @media (max-width: 674px) {
+            margin-bottom: 2.3em;
+        }
+
+        > p {
+            font-size: .8em;
+        }
+
+        em {
+            font-size: 1.2em;
+            font-style: normal;
+            @include reset();
+            color: $-color-cross;
+            
+            @media (max-width: 385px) {
+                margin-bottom: .5em;
+            }
+        }
+    }
+
+    &__icon {
+       font-size: 1.1em;
+       margin-right: .1em;
+       color: $-color-cross;
+    }
+
+    &__bottom {
+        padding-top: .8em;
+        @include between;
+        border-top: 1px solid $--borderBlue;
+        width: 100%;
+
+        @media (max-width: 530px) {
+            align-items: center;
+            height: 4em;
+       }
+
+       @media (max-width: 385px) {
+           align-items: flex-start;
+           flex-direction: column;
+           justify-content: flex-start;
+           height: 4.7em;
+       }
+
+
+        &__span {
+            @include reset();
+            color: lighten($text-mid, 18);
+            font-size: .75em;
+
+            @media (max-width: 385px) {
+                 margin-bottom: 1em;
+
+                 &:last-child {
+                    margin-bottom: 0;
+                 }
+            }
+        }
+
+        &__link {
+            @include reset;
+            @include align;
+            color: lighten($text-mid, 18);
+            font-size: .99em;
+            transition: color .3s linear;
+
+            &:hover {
+                color: $-blue-sover;
+            }
+        }
+
+        &__icon {
+            margin-right: .5em;
+        }
+    }
+
+}

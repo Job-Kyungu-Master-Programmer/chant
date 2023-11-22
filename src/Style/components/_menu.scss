@@ -1,0 +1,51 @@
+
+
+
+
+.header__menu {
+    @include center;
+    height: 100%;
+
+     @media (min-width: 951px) {
+         display: none;
+         
+        }
+        .header__menu__menu {
+            font-size: 3em;
+            color: $-blue-s;
+            cursor: pointer;
+
+            @media (max-width: 400px) {
+                font-size: 2.5em;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 2.8em;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 2.85em;
+            }
+        }
+}
+
+.header__close__menu { // For open Menu 
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+
+    @media (max-width: 400px) {
+        top: 1.5em;
+        right: 1.6em;
+    }
+
+    .header__close__menu__icon {
+        font-size: 1.8em;
+        color: $--light;
+
+        @media (min-width: 951px) {
+            display: none;
+        }
+    }
+}

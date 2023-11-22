@@ -1,0 +1,88 @@
+
+
+
+.lyrics {
+    position: relative;
+    background: $--lightBlue;
+    
+    &__header {
+        @include center;
+        height: 3em;
+        background: $--light;
+        border-bottom: .05em solid $--borderBlue;
+
+        @media (max-width: 400px) {
+            border-top: .05em solid $--borderBlue;
+            transform: translateY(-17%);
+            min-height: 4.7em;
+            
+       }
+    }
+
+    &__title {
+        margin: 0 .8em;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.5em;
+
+        @media (max-width: 400px) {
+            margin: 0 .15em;
+            color: $-blue-s;
+            font-weight: 600;
+            font-size: 1.22em;
+
+        }
+    }
+
+    &__song {
+        position: relative;
+        // padding-top: 15em;
+        // @include flex;
+        // justify-content: center;
+        // flex-direction: column;
+        // align-items: center;
+        // background: #ccc;
+        // border: 1px solid red;
+        height: 43em;
+        // overflow-y: scroll;
+    }
+
+    &__list {
+        margin: 0 auto;
+        padding-top: 1em;
+        // @include align;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        // background: goldenrod;
+        width: 100%;
+        height: 43em;
+        overflow: auto;
+    }
+
+    &__couplet {
+        margin-bottom: 1em;
+        padding: 1.2em;
+        width: 17em;
+        border-radius: .3em;
+        text-align: center;
+        min-height: auto;
+        background: $--light;
+        border: 1px solid $--borderBlue;
+        font-size: 1.1em;
+    }
+
+    &__ref {
+        margin-bottom: 1em;
+        width: 17em;
+        font-size: 1.1em;
+        line-height: 130%;
+    }
+
+    &__choeur {
+        display: block;
+        margin-bottom: .3em;
+        color: $-blue-s;
+    }
+}

@@ -1,0 +1,43 @@
+
+
+/// Flex 
+@mixin flex {
+    display: flex;
+}
+
+@mixin align {
+    display: flex;
+    align-items: center;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin around {
+    display: flex;
+    justify-content: space-around;
+}
+
+// List 
+@mixin list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+//  Link, Button 
+@mixin reset {
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    outline: 0;
+}

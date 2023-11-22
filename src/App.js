@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route,Routes } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Home from "./components/Home"
+import Songs from "./components/Songs"
+import About from "./components/About"
+import Song from "./components/Song"
 
-function App() {
+const Wrapper = ({ children }) => children;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+        <BrowserRouter>
+            <header className="app__header">
+              <Navbar />
+            </header>
+            <div className="app__bar">
+              <Wrapper>
+                <Routes>
+                    <Route path="*" element={<Home />} />
+                    <Route path="/songs/*" element={<Songs />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="song" element={<Song />} />
+                </Routes>
+              </Wrapper>
+            </div>
+        </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
