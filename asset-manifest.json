@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/chant/static/css/main.3875db1e.css",
+    "main.js": "/chant/static/js/main.1771a434.js",
+    "static/media/pray1.jpeg": "/chant/static/media/pray1.c80041b006eaae687298.jpeg",
+    "static/media/img1.png": "/chant/static/media/img1.21f9b78876eae15967f3.png",
+    "static/media/capture008.png": "/chant/static/media/capture008.40e2a312af649b457d84.png",
+    "static/media/cross-Christian.jpeg": "/chant/static/media/cross-Christian.16f5fc68e2cfb97cb4a4.jpeg",
+    "index.html": "/chant/index.html",
+    "main.3875db1e.css.map": "/chant/static/css/main.3875db1e.css.map",
+    "main.1771a434.js.map": "/chant/static/js/main.1771a434.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3875db1e.css",
+    "static/js/main.1771a434.js"
+  ]
+}
